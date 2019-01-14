@@ -23,7 +23,8 @@ describe "#translate" do
   end
 
   it "translates a word beginning with three consonants" do
-    expect(translate("three")).to eq("eethray")
+    s = translate("three")
+    expect(s).to eq("eethray")
   end
 
   it "counts 'sch' as a single phoneme" do
@@ -47,7 +48,8 @@ describe "#translate" do
   end
 
   # Test-driving bonus:
-  # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
-  # * retain the punctuation from the original phrase
-
+  it "Test-driving bonus" do
+    s = translate("tHe haT Of MisS is bRown")
+    expect(s).to eq("etHay aThay Ofay isSMay isay ownbRay")
+  end
 end
