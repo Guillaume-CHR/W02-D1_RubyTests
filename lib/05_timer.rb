@@ -7,7 +7,10 @@ def time_string(iTime)
     hour = iTime/60
     iTime = iTime % 60
   end
-    second = iTime
+  second = iTime
 
   return day.to_s.rjust(2,'0') +":"+ hour.to_s.rjust(2,'0') + ":" + second.to_s.rjust(2,'0')
+  
+  #In one line 
+  #[iTime / 3600, iTime / 60 % 60, iTime % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')
 end
